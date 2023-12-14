@@ -3,9 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Angular js</title>
 </head>
 <body>
-    <h1>Hello Angularjs</h1>
+    <div id="target" ng-app="myTestapp">
+        <section> Section 1
+            <article>Section 2</article>
+        </section>
+    </div>
+    <div id="target" ng-bdd="hello">
+        <section> Section 1
+            <article>Section 2</article>
+        </section>
+    </div>
 </body>
+<script>
+    // let elem = document.getElementById('target');
+    // console.log(elem);
+    // const test = elem.getAttribute('ng-app');
+    // console.log(test);
+    var elem = document.querySelector('[ng-app]')
+    console.log(elem.getAttribute('ng-app'));
+    console.log(elem)
+</script>
 </html>
