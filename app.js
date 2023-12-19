@@ -1,18 +1,15 @@
 (function(){
-    'use strict';
-    angular.module('diApp',[])
-    .controller('DIController',function($scope,$filter){
-        $scope.name = "Pizza";
-
-        function init(some){
-            var upCase = $filter('uppercase');
-            $scope.name = upCase(some);
-        }
-
-        $scope.uperCase = function(){
-            init($scope.name);
-        }
-
-
-    });
+'use strict';
+angular.module('myApp',[])
+.controller('myController',function($scope){
+    $scope.name = 'STEVE JOBS';
+    $scope.msgPhoto = 'msg1';
+    $scope.sayMessage = function(){
+        return "CREATIVITY IS JUST CONNECTING THINGS";
+    }
+    var i = 0;
+    $scope.showPhoto = function(){
+      $scope.msgPhoto = "msg2";
+    }
+})
 })();

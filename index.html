@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="diApp">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angular-Test</title>
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div ng-controller="DIController">
-        <input type="text" ng-model="name" ng-keyup="uperCase();">
+    <div class="main" ng-controller="myController">
+        <b>{{name}}</b> said something: <b><i>{{sayMessage()}}</i></b> 
+        <div>
+            <button id="sayBtn" ng-click="showPhoto();">Say Message</button>
+            <br>
+            <img ng-src="images/{{msgPhoto}}.jpg" alt="">
+        </div>
     </div>
 </body>
 </html>
