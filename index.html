@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angular-Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 1.2rem;
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="main" ng-controller="myController">
-        <b>{{name}}</b> said something: <b><i>{{sayMessage()}}</i></b> 
-        <input type="text" ng-model="cost" ng-blur="filter();" aria-label="amount" >
-        
-        <div>
-            <button id="sayBtn" ng-click="showPhoto();">Say Message</button>
-            Phone-Cost:{{phoneCost | currency : "MMK" : 5}}
 
-            <br>
-            <img ng-src="images/{{msgPhoto}}.jpg" alt="">
-        </div>
+<body>
+    <h1>Digit Circle</h1>
+    <div ng-controller="myController">
+        <button ng-click="showNumberOfWatchers()">#show Watchers</button>
+        <br>
+        <button ng-click="counterOnce();">Once Couner</button>
+        <br>
+        <button ng-click="upCounter()">Incremment</button>
+        {{counter}}
     </div>
 </body>
+
 </html>
