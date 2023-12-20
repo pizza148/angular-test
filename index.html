@@ -21,12 +21,13 @@
 <body>
     <h1>Digit Circle</h1>
     <div ng-controller="myController">
-        <button ng-click="showNumberOfWatchers()">#show Watchers</button>
-        <br>
-        <button ng-click="counterOnce();">Once Couner</button>
-        <br>
-        <button ng-click="upCounter()">Incremment</button>
-        {{counter}}
+        <button ng-click="logWatchers()" ># log Watchers</button>
+        <button ng-click="countOnce();">#onceCounter</button>
+        <button ng-click="upCounter();"># increment++</button>
+        <div>
+            <p>{{onceCounter}}</p>
+            <p>{{counter}} </p>
+        </div>
     </div>
 </body>
 

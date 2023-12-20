@@ -2,27 +2,26 @@
     'use strict';
     angular.module('myApp',[])
     .controller('myController',MyController);
-    MyController.$inject =['$scope'];
+    MyController.$inject = ['$scope'];
     function MyController ($scope){
         $scope.onceCounter = 0;
         $scope.counter = 0;
-        $scope.showNumberOfWatchers = function(){
-            console.log('# watch counter',$scope.$$watchersCount);
-        };
-        $scope.counterOnce = function(){
+         $scope.countOnce = function(){
             $scope.onceCounter = 1;
+        }
+        $scope.logWatchers = function(){
+            console.log($scope.$$watchersCount);
         }
         $scope.upCounter = function(){
             $scope.counter++;
         }
-        $scope.$watch('onceCounter',function(newvalue,oldvalue){
-            console.log('Old Value',oldvalue);
-            console.log('new value',newvalue);
-        });
-
+        $scope.$watch('onceCounter',function(newValue,oldValue){
+            console.log('Once Counter old value',oldValue);
+            console.log('Once Counter new value',newValue);
+        })
         $scope.$watch('counter',function(newValue,oldValue){
-            console.log('counter old vale',oldValue);
-            console.log('counter new value',newValue);
+            console.log('Counter old value',oldValue);
+            console.log('Counter New Value',newValue);
         })
     };
 })();
